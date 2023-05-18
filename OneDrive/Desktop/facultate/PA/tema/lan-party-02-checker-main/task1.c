@@ -1,19 +1,5 @@
 #include "header.h"
 
-void populateTeam(FILE* file, TEAMNODE **newTeam)
-{
-    (*newTeam)->team->player = (PLAYER*)malloc(sizeof(PLAYER) * ((*newTeam)->team->teamSize));
-    for(int j = 0; j < (*newTeam)->team->teamSize; j++){
-        fscanf(file, "%s", (*newTeam)->team->player[j].firstName);
-        fscanf(file, "%s", (*newTeam)->team->player[j].secondName);
-        fscanf(file, "%d", &(*newTeam)->team->player[j].points);
-    }
-    int c;
-    while ((c = fgetc(file)) != EOF && c != '\n') {
-        continue;
-    }
-}
-
 void task1(char* inPath, char* outPath, TEAMNODE **head)
 {
     FILE *inFile;
@@ -31,14 +17,12 @@ void task1(char* inPath, char* outPath, TEAMNODE **head)
         newTeam->next = *head;
         fscanf(inFile, "%d", &newTeam->team->teamSize);
         fgetc(inFile);
-        fgets(newTeam->team->name, 100, inFile);
-        newTeam->team->name[strcspn(newTeam->team->name, "\n")] = 0;
+        fgets(newTeam->team->name, SIZE, inFile);
+        newTeam->team->name[strcspn(newTeam->team->name, "\r\n")] = 0;
         populateTeam(inFile, &newTeam);
         *head = newTeam;
         (*head)->listSize = numTeams;
     }
-    
     display(*head, outPath);
-
     fclose(inFile);
 }
