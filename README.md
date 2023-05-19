@@ -1,5 +1,5 @@
 # LAN-Party
-tema PA
+Tema Proiectarea Algoritmilor
 
 ## Descriere
 Tema Proiectarea Algoritmilor - facultatea de Automatică și Calculatoare, Universitatea Politehnica București.
@@ -9,13 +9,13 @@ Tema Proiectarea Algoritmilor - facultatea de Automatică și Calculatoare, Univ
 * Argumentele de linie de comandă sunt extrase pentru a obține căile către fișierul de task-uri, fișierul de intrare și fișierul de ieșire.
 * Se declară variabilele necesare, inclusiv vectorul tasksArr și două structuri TEAMNODE pentru stocarea informațiilor despre echipe.
 * Fișierul de sarcini este deschis și se verifică erorile de deschidere.
-* Sarcinile sunt citite din fișierul de sarcini și stocate în vectorul tasksArr.
-* Sarcinile sunt executate în funcție de opțiunile specificate.
+* Task-urile sunt citite din fișierul de task-uri și stocate în vectorul tasksArr.
+* Task-urile sunt executate în funcție de vectorul de task-uri.
 * Memoria alocată dinamic este eliberată și fișierele deschise sunt închise.
 
 ## TASK 1
 
-* Citeste datele despre echipe dintr-un fișier dat și le salvează într-o structură de date de tip listă simplu înlănțuită.
+* Citește datele despre echipe dintr-un fișier dat și le salvează într-o structură de date de tip listă simplu înlănțuită.
 * Afișează informațiile despre echipe într-un fișier specificat.
 
 ## Funcționalitate
@@ -51,7 +51,7 @@ Această funcție primește doi parametri:
 
 1. Calculează punctajul pentru fiecare echipă din lista specificată utilizând funcția teamPoints.
 2. Inițializează o variabilă minimVal cu cel mai mic punctaj din lista de echipe.
-3. Inițializează o constantă epsilon cu o valoare foarte mică pentru comparații numerelor floating point.
+3. Inițializează o constantă epsilon cu o valoare foarte mică pentru compararea numerelor floating point (float).
 4. Parcurge lista de echipe și elimină iterativ echipele cu cel mai mic punctaj, până când numărul total de echipe rămase este cea mai mare putere a lui 2 mai mică decât numărul de echipe din listă.
 5. Actualizează valoarea minimului după fiecare eliminare a echipei.
 6. Afișează informațiile despre echipele rămase în fișierul de ieșire specificat utilizând funcția display.
@@ -83,11 +83,11 @@ Această funcție primește trei parametri:
 4. Creează o copie a listei principale de echipe utilizând pointerul head.
 5. Elimină spațiile din numele echipelor din lista copie utilizând funcția removeSpaceList.
 6. Parcurge lista copie și adaugă meciurile în coadă utilizând funcția enQueue, astfel încât primele două echipe vor forma primul meci, și așa mai departe.
-7. Parcurge lista copie și afișează numele echipelor în fișierul de ieșire până la penultimul element.
-8. Eliberează memoria ocupată de ultimul element al listei copie utilizând free.
+7. Parcurge lista copie și afișează numele echipelor în fișierul de ieșire.
+8. Eliberează memoria ocupată de lista copie utilizând free.
 9. Adaugă un separator de linie în fișierul de ieșire.
 10. Calculează numărul maxim de runde pentru turneu folosind logaritmul în baza 2 al dimensiunii listei principale de echipe.
-11. Inițializează doi pointeri către structuri de tip Node pentru stivele de învinși și câștigători și setează-le inițial la NULL.
+11. Inițializează doi pointeri către structuri de tip Node pentru stivele de învinși și câștigători și le setează inițial la NULL.
 12. Într-o buclă, pentru fiecare rundă a turneului:
     * Afișează numărul rundei în fișierul de ieșire.
     * Afișează conținutul cozii de meciuri utilizând funcția printQueue.
@@ -97,7 +97,7 @@ Această funcție primește trei parametri:
     * Șterge învinșii din stiva de învinși utilizând deleteStack.
     * Parcurge stiva câștigătorilor și adaugă echipele în coada de meciuri, formându-se noi meciuri cu echipe consecutive.
     * Salvează ultimele 8 echipe în lista head_last8 utilizând funcția last8_save.
-    * Incrementă numărul rundei.
+    * Incrementează numărul rundei.
     * Eliberează memoria ocupată de stiva câștigătorilor utilizând deleteStack.
 13. Eliberează memoria ocupată de coadă utilizând deleteQueue.
 14. Eliberează memoria ocupată de stiva câștigătorilor utilizând deleteStack.
