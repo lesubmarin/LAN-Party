@@ -64,6 +64,7 @@ void postorderDelTree(TreeNode* root);
 //FUNCTII TASK 1:
 void task1(char* inPath, char* outPath, TEAMNODE** head);
 void populateTeam(FILE* file, TEAMNODE **newTeam);
+void removeEndLine(char *c);
 
 //FUNCTII TASK2:
 void task2(TEAMNODE** node, char* outPath);
