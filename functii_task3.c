@@ -75,7 +75,8 @@ TEAM* top(Node* top)
 	return top->team;
 } 
 
-void push(Node** top, TEAM* newteam) {
+void push(Node** top, TEAM* newteam) 
+{
 	Node* newNode = (Node*)malloc(sizeof(Node));
     checkErr(newNode, "Eroare la alocarea memoriei");
 
