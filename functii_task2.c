@@ -2,19 +2,19 @@
 
 void deleteTeam(TEAMNODE** head, TEAM* team)
 {
-    if (*head == NULL) {
+    if(*head == NULL){
         return;
     }
     TEAMNODE* headcopy = *head;
-    if (headcopy->team == team) {
+    if(headcopy->team == team){
         (*head)->next->listSize = (*head)->listSize;
         *head = (*head)->next;
         free(headcopy);
         return;
     }
     TEAMNODE* prev = *head;
-    while (headcopy != NULL) {
-        if (headcopy->team == team) {
+    while(headcopy != NULL){
+        if(headcopy->team == team){
             prev->next = headcopy->next;
             free(headcopy);
             return;
