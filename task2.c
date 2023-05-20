@@ -36,4 +36,3 @@ void task2(TEAMNODE** head, char* outPath)
     // Afișarea listei de echipe în fișierul de ieșire
     display(*head, outPath);
 }
-
