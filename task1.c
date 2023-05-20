@@ -34,7 +34,7 @@ void task1(char* inPath, char* outPath, TEAMNODE **head)
         fscanf(inFile, "%d", &newTeam->team->teamSize);
         fgetc(inFile);
         fgets(newTeam->team->name, SIZE, inFile);
-        newTeam->team->name[strcspn(newTeam->team->name, "\r\n")] = 0;
+        removeEndLine(newTeam->team->name);
 
         // Popularea echipei cu jucătorii din fișier
         populateTeam(inFile, &newTeam);
