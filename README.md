@@ -153,3 +153,17 @@ Această funcție primește doi parametri:
 10. Afișează echipele de pe nivelul 2 al Arborelui AVL utilizând funcția printLevel.
 11. Eliberează memoria alocată pentru vectorul head_last8Arry și Arborele AVL (root).
 12. Închide fișierul de ieșire.
+
+## Problema: Erori neașteptate din cauza caracterelor "\r" în output
+
+### Descriere
+În timpul rezolvării temei, am întâmpinat o problemă legată de apariția unor erori neașteptate în output. Am descoperit că aceste erori erau cauzate de caracterul special "\r" (carriage return) care apare în anumite locuri din input sau textul prelucrat.
+
+### Cauza
+Diferențele în formatarea caracterelor de sfârșit de linie ("\r\n" pentru Windows și "\n" pentru sistemele bazate pe Unix) pot cauza probleme de compatibilitate între diferite sisteme sau tehnologii. În cazul meu, numele echipelor conțineau caractere "\r" care provoacă comportament neașteptat, cum ar fi deplasarea cursorului la începutul liniei.
+
+### Soluție
+Pentru a remedia această problemă, am modificat codul astfel încât să elimine atât caracterele "\n" cât și "\r" de la sfârșitul numelor echipelor înainte de a le utiliza sau afișa.
+
+## Impresii finale 
+Tema a fost primul proiect in C de dimensiunea asta la care am lucrat și consider că am învățat multe din ea, nu doar despre structuri de date și algoritmi cât și despre gestionarea problemelor care pot să apară, mi-am dezvoltat atenția și dorința de a programa.
