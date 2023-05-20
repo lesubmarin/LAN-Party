@@ -18,16 +18,14 @@ void populateTeam(FILE* file, TEAMNODE **newTeam)
         fscanf(file, "%d", &(*newTeam)->team->player[j].points);
         
     }
-    int c;
-    while ((c = fgetc(file)) != EOF && c != '\n'){
-        continue;
-    }
+    char c;
+    c = fgetc(file);
 }
 
 void removeEndLine(char *c)
 {
-    for (int i = 0; c[i] != '\0'; i++){
-        if (c[i] == '\r' || c[i] == '\n'){
+    for(int i = 0; c[i] != '\0'; i++){
+        if(c[i] == '\r' || c[i] == '\n'){
             c[i] = '\0';
             break;
         }
