@@ -4,7 +4,7 @@ void task5(TEAMNODE* head_last8, char* outPath)
 {
     // Deschide fișierul de output și verifică erorile
     FILE* outFile;
-    if ((outFile = fopen(outPath, "at")) == NULL) {
+    if((outFile = fopen(outPath, "at")) == NULL){
         printf("Error opening the output file.\n");
         return;
     }
