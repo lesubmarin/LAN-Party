@@ -9,6 +9,7 @@
 
 #define SIZE 1000
 
+//jucatorii echipelor
 typedef struct Player
 {
     char* firstName;
@@ -16,6 +17,7 @@ typedef struct Player
     int points;
 }PLAYER;
 
+//echipele
 typedef struct Team{
     int teamSize;
     char* name;
@@ -23,12 +25,14 @@ typedef struct Team{
     float points;
 }TEAM;
 
+//lista de echipe
 typedef struct TeamNode{
     int listSize;
     TEAM* team;
     struct TeamNode* next;
 }TEAMNODE;
 
+//coada de meciuri
 typedef struct NodeQueue{
 	TEAM* team1;
     TEAM* team2;
@@ -40,11 +44,13 @@ NodeQueue* front;
 NodeQueue* rear;
 }Queue;
 
+//stiva de echipe
 typedef struct Node{
     TEAM* team;
     struct Node* next;
 }Node;
 
+//arbore binar
 typedef struct N{
     int height;
     TEAM* team;
