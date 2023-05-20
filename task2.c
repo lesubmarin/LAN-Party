@@ -17,10 +17,8 @@ void task2(TEAMNODE** head, char* outPath)
     while((log2((*head)->listSize) - floor(log2((*head)->listSize))) > epsilon){
         node = *head;
          // Parcurgerea listei pentru a găsi echipa cu punctajul minim
-        while(node != NULL)
-        {
-            if(node->team->points == minimVal)
-            {
+        while(node != NULL){
+            if(node->team->points == minimVal){
                 // Ștergerea echipei din listă
                 deleteTeam(head, node->team);
                 (*head)->listSize--;
