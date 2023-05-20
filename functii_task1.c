@@ -23,3 +23,13 @@ void populateTeam(FILE* file, TEAMNODE **newTeam)
         continue;
     }
 }
+
+void removeEndLine(char *c)
+{
+    for (int i = 0; c[i] != '\0'; i++){
+        if (c[i] == '\r' || c[i] == '\n'){
+            c[i] = '\0';
+            break;
+        }
+    }
+}
