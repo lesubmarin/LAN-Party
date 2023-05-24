@@ -166,4 +166,4 @@ Diferențele în formatarea caracterelor de sfârșit de linie ("\r\n" pentru Wi
 Pentru a remedia această problemă, am modificat codul astfel încât să elimine atât caracterele "\n" cât și "\r" de la sfârșitul numelor echipelor înainte de a le utiliza sau afișa.
 
 ## Impresii finale 
-Tema a fost primul proiect in C de dimensiunea asta la care am lucrat și consider că am învățat multe din ea, nu doar despre structuri de date și algoritmi cât și despre gestionarea problemelor care pot să apară, mi-am dezvoltat atenția și dorința de a programa. De asemenea, a fost pentru prima dată când am încărcat un proiect pe Git și consider că m-a ajutat să învăț cum se folosește și la ce ajută asta.
+Tema a fost primul proiect în C de dimensiunea asta la care am lucrat și consider că am învățat multe din ea, nu doar despre structuri de date și algoritmi cât și despre gestionarea problemelor care pot să apară, mi-am dezvoltat atenția și dorința de a programa. De asemenea, a fost pentru prima dată când am încărcat un proiect pe Git și consider că m-a ajutat să învăț cum se folosește și la ce ajută asta.
